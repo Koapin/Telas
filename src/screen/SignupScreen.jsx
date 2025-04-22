@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View, Image } from 'react-native';
 import React, { useState } from 'react';
 import { colors } from '../utils/colors';
 import { fonts } from '../utils/fonts';
@@ -7,6 +7,7 @@ import SimpleLineIcons from "react-native-vector-icons/SimpleLineIcons";
 import { useNavigation } from '@react-navigation/native';
 
 const SignupScreen = () => {
+
     const navigation = useNavigation();
     const handleGoBack = () => {
         navigation.goBack();
@@ -14,7 +15,7 @@ const SignupScreen = () => {
     const [secureEntery, setSecureEntery] = useState(true);
     const handleLogin = () => {
         navigate.navigation("LOGIN")
-    }
+    };
 return (
     <View style={styles.container}>
         <TouchableOpacity style={styles.backButtonWrapper} onPress={handleGoBack}>

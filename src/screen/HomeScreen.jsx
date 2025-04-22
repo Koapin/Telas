@@ -8,10 +8,10 @@ const HomeScreen = () => {
     const navigation = useNavigation();
     const handleLogin = () => {
         navigation.navigate("LOGIN");
-    }
+    };
     const handleSignup = () => {
         navigation.navigate("SIGNUP");
-    }
+    };
     return (
         <View style={styles.container}>
             <Image source={require("../assets/logo.png")} 
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
 
     subTitle: {
         fontSize: 20,
-        textAlign: center,
+        textAlign: "center",
         color: colors.secondary,
         paddingHorizontal: 20,
         fontFamily: fonts.Italic
