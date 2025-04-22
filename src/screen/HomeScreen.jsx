@@ -14,8 +14,6 @@ const HomeScreen = () => {
     };
     return (
         <View style={styles.container}>
-            <Image source={require("../assets/logo.png")} 
-            style={styles.logo}/>
             <Image source={require("../assets/icarus-logo.png")} 
             style={styles.bannerImage}/>
             <Text style={styles.title}>
@@ -45,19 +43,14 @@ const styles = StyleSheet.create({
 
     container: {
         flex: 1,
-        backgroundColor: colors.white
-    },
-
-    logo: {
-        height:40,
-        width: 140,
-        marginVertical: 20
+        backgroundColor: colors.yellow
     },
 
     bannerImage: {
-        marginVertical: 20,
-        height:250,
-        width: 230
+        marginTop: 100,
+        height:300,
+        width: 230,
+        alignSelf: "center"
     },
 
     title: {
@@ -84,25 +77,26 @@ const styles = StyleSheet.create({
         borderColor: colors.primary,
         width: "80%",
         height: 60,
-        borderRadius: 100
+        borderRadius: 100,
+        alignSelf: "center"
     },
 
     loginButtonWrapper: {
         justifyContent: "center",
         alignItems: "center",
-        width: "50%",
+        width: "51%",
         borderRadius: 100
     },
 
-    loginButtonTex: {
+    loginButtonText: {
         fontSize: 20,
-        color: colors.white,
+        color: colors.yellow,
         fontFamily: fonts.DMsans
     },
 
     signupButtonText: {
         fontSize: 20,
-        color: colors.white,
+        color: colors.primary,
         fontFamily: fonts.DMsans
     }
 });

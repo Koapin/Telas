@@ -77,7 +77,7 @@ export default LoginScreen
 const styles = StyleSheet.create({
     container: {
         flex:  1,
-        backgroundColor: colors.white,
+        backgroundColor: colors.yellow,
         padding: 20
     },
     backButtonWrapper: {
@@ -121,12 +121,13 @@ const styles = StyleSheet.create({
         marginVertical: 10,
     },
     loginButtonWrapper: {
+        color: colors.gray,
         backgroundColor: colors.primary,
         borderRadius: 100,
         marginTop: 20
     },
     loginText: {
-        color: colors.white,
+        color: colors.yellow,
         fontSize: 20,
         fontFamily: fonts.DMsans,
         textAlign: "center",
@@ -144,11 +145,13 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         borderColor: colors.primary,
         borderRadius: 100,
+        justifyContent: "center",
         alignItems: "center",
         padding: 10,
         gap: 10
     },
     googleImage: {
+        borderRadius: 10,
         height: 20,
         width: 20
     },

@@ -14,7 +14,7 @@ const SignupScreen = () => {
     };
     const [secureEntery, setSecureEntery] = useState(true);
     const handleLogin = () => {
-        navigate.navigation("LOGIN")
+        navigation.navigate("LOGIN")
     };
 return (
     <View style={styles.container}>
@@ -39,13 +39,25 @@ return (
             <View style={styles.inputContainer}>
             <SimpleLineIcons name={"screen-smartphone"}
             size={30} color={colors.secondary}/>
-            <TextInput style={styles.textInput} placeholder='Enter your phone number' 
+            <TextInput style={styles.textInput} placeholder='Enter your password' 
             placeholderTextColor={colors.secondary} keyboardType="phone-pad"/>
             </View>
             <View style={styles.inputContainer}>
             <SimpleLineIcons name={"lock"} 
             size={30} color={colors.secondary}/>
-                <TextInput style={styles.textInput} placeholder='Enter your password' 
+                <TextInput style={styles.textInput} placeholder='Confirm your password' 
+                placeholderTextColor={colors.secondary} secureTextEntry={secureEntery}/>
+            <TouchableOpacity onPress={() => {
+                setSecureEntery((prev) => !prev);
+            }}>
+                <SimpleLineIcons name={"eye"} 
+                size={20} color={colors.secondary}/>
+            </TouchableOpacity>
+            </View>
+            <View style={styles.inputContainer}>
+            <SimpleLineIcons name={"lock"} 
+            size={30} color={colors.secondary}/>
+                <TextInput style={styles.textInput} placeholder='Confirm your password' 
                 placeholderTextColor={colors.secondary} secureTextEntry={secureEntery}/>
             <TouchableOpacity onPress={() => {
                 setSecureEntery((prev) => !prev);
@@ -79,7 +91,7 @@ export default SignupScreen;
 const styles = StyleSheet.create({
     container: {
         flex:  1,
-        backgroundColor: colors.white,
+        backgroundColor: colors.yellow,
         padding: 20
     },
     backButtonWrapper: {
@@ -128,7 +140,7 @@ const styles = StyleSheet.create({
         marginTop: 20
     },
     loginText: {
-        color: colors.white,
+        color: colors.yellow,
         fontSize: 20,
         fontFamily: fonts.DMsans,
         textAlign: "center",
@@ -147,10 +159,12 @@ const styles = StyleSheet.create({
         borderColor: colors.primary,
         borderRadius: 100,
         alignItems: "center",
+        justifyContent: "center",
         padding: 10,
         gap: 10
     },
     googleImage: {
+        borderRadius: 10,
         height: 20,
         width: 20
     },
